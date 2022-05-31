@@ -41,17 +41,15 @@ const App = () => {
     <div className="App">
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
-          <p className="sub-text">
-            The only emoji store that accepts shitcoins
-          </p>
+          <p className="header"> 😳 Products Store 😈</p>
+          <p className="sub-text">An online store that accepts crypto</p>
         </header>
 
         <main>
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
-        <div className="footer-container">
+        {/* <div className="footer-container">
           <img
             alt="Twitter Logo"
             className="twitter-logo"
@@ -63,7 +61,7 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >{`built on @${TWITTER_HANDLE}`}</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

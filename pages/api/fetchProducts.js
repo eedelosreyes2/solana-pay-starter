@@ -1,4 +1,4 @@
-import products from './products.json';
+import products from './products.json'; // Change to API
 
 export default function handler(req, res) {
   // If get request
