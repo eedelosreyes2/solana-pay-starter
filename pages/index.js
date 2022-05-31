@@ -41,7 +41,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Products Store 😈</p>
+          <p className="header"> 😳 Digital Files Store 😈</p>
           <p className="sub-text">An online store that accepts crypto</p>
         </header>
 
