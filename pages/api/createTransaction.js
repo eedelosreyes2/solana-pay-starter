@@ -3,7 +3,7 @@ import {
   clusterApiUrl,
   Connection,
   PublicKey,
-  TransactionBlockhashCtor,
+  Transaction,
   SystemProgram,
   LAMPORTS_PER_SOL,
 } from '@solana/web3.js';
@@ -53,9 +53,10 @@ const createTransaction = async (req, res) => {
 
     // The first two things we need - a recent block ID
     // and the public key of the fee payer
-    const tx = new TransactionBlockhashCtor({
+    const tx = new Transaction({
       recentBlockhash: blockhash,
       feePayer: buyerPublicKey,
+      blockhash: blockhash
     });
 
     // This is the "action" that the transaction will take
