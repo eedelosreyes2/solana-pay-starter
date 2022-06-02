@@ -18,7 +18,7 @@ const App = () => {
         .then((response) => response.json())
         .then((data) => {
           setProducts(data);
-          console.log('Products', data);
+          // console.log('Products', data);
         });
     }
   }, [publicKey]);
