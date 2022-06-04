@@ -6,10 +6,6 @@ import HeadComponent from '../components/Head';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
-// Constants
-const TWITTER_HANDLE = '_buildspace';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-
 const App = () => {
   const { publicKey } = useWallet();
   const isOwner = publicKey
@@ -50,7 +46,7 @@ const App = () => {
       Built by{' '}
       <a
         className="footer-text"
-        href="https://elijahdr.vercel.app/"
+        href="https://elijahdr.vercel.app"
         target="_blank"
         rel="noreferrer"
       >
@@ -59,7 +55,7 @@ const App = () => {
       on{' '}
       <a
         className="footer-text"
-        href="https://elijahdr.vercel.app/"
+        href="https://twitter.com/_buildspace"
         target="_blank"
         rel="noreferrer"
       >
