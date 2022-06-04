@@ -115,7 +115,7 @@ export default function Buy({ itemID }) {
           className="buy-button"
           onClick={processTransaction}
         >
-          Buy now 🠚
+          Buy
         </button>
       )}
     </div>

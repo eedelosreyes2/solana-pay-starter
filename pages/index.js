@@ -45,14 +45,37 @@ const App = () => {
     </div>
   );
 
+  const renderFooter = () => (
+    <div>
+      Built by{' '}
+      <a
+        className="footer-text"
+        href="https://elijahdr.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Elijah
+      </a>{' '}
+      on{' '}
+      <a
+        className="footer-text"
+        href="https://elijahdr.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        buildspace
+      </a>
+    </div>
+  );
+
   return (
     <div className="App">
       <HeadComponent />
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
+          <p className="header">Main Title Here</p>
           <p className="sub-text">
-            The only emoji store that accepts shitcoins
+            The subtext would go here now with a description or something
           </p>
 
           {isOwner && (
@@ -70,7 +93,7 @@ const App = () => {
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
-        <div className="footer-container">
+        {/* <div className="footer-container">
           <img
             alt="Twitter Logo"
             className="twitter-logo"
@@ -82,7 +105,8 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >{`built on @${TWITTER_HANDLE}`}</a>
-        </div>
+        </div> */}
+        <div className="footer-container">{renderFooter()}</div>
       </div>
     </div>
   );
