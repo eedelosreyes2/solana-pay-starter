@@ -71,7 +71,7 @@ const App = () => {
         <header className="header-container">
           <p className="header">Solana Pay Store</p>
           <p className="sub-text">
-            An online digital store that accepts SPL tokens
+            An online digital store that accepts SPL tokens (Devnet)
           </p>
 
           {isOwner && (
