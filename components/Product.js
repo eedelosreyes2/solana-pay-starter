@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../styles/Product.module.css';
 import Buy from './Buy';
-import Image from 'next';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
-export default function Product({ product }) {
+export default function Product({ product, isConnected }) {
   const { id, name, price, description, image_url } = product;
 
   return (
@@ -21,7 +21,14 @@ export default function Product({ product }) {
         <div className={styles.product_action}>
           <div className={styles.product_price}>{price} USDC</div>
           {/* Replace the IPFS component with the Buy component! */}
-          <Buy itemID={id} />
+          {isConnected ? (
+            <Buy itemID={id} />
+          ) : (
+            <div>
+              {' '}
+              <WalletMultiButton className="connect-wallet-button" />
+            </div>
+          )}
         </div>
       </div>
     </div>

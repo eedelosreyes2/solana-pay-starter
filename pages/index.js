@@ -23,20 +23,20 @@ const App = () => {
   );
 
   useEffect(() => {
-    if (publicKey) {
-      fetch(`/api/fetchProducts`)
-        .then((response) => response.json())
-        .then((data) => {
-          setProducts(data);
-          console.log('Products', data);
-        });
-    }
-  }, [publicKey]);
+    // if (publicKey) {
+    fetch(`/api/fetchProducts`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+        console.log('Products', data);
+      });
+    // }
+  }, []);
 
   const renderItemBuyContainer = () => (
     <div className="products-container">
       {products.map((product) => (
-        <Product key={product.id} product={product} />
+        <Product key={product.id} product={product} isConnected={publicKey} />
       ))}
     </div>
   );
@@ -69,9 +69,9 @@ const App = () => {
       <HeadComponent />
       <div className="container">
         <header className="header-container">
-          <p className="header">Main Title Here</p>
+          <p className="header">Solana Pay Store</p>
           <p className="sub-text">
-            The subtext would go here now with a description or something
+            An online digital store that accepts SPL tokens
           </p>
 
           {isOwner && (
@@ -86,22 +86,10 @@ const App = () => {
 
         <main>
           {creating && <CreateProduct />}
-          {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+          {/* {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()} */}
+          {renderItemBuyContainer()}
         </main>
 
-        {/* <div className="footer-container">
-          <img
-            alt="Twitter Logo"
-            className="twitter-logo"
-            src="twitter-logo.svg"
-          />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
-        </div> */}
         <div className="footer-container">{renderFooter()}</div>
       </div>
     </div>

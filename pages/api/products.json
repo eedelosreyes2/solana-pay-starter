@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "name": "Unsample 0",
+    "name": "Unsample #0",
     "price": "0",
     "description": "A set of 5 images collected from unsample.net",
     "image_url": "/unsamples0.jpg",
-    "filename": "Emojis.zip",
-    "hash": "QmPU8hkwZuTWfV998LCDgc8Ax54QE2cC5uNZfvHuKKxQVV"
+    "filename": "unsamples0.zip",
+    "hash": "QmWtTj4tpm7oRxiVhV7U4kHfQwhhJJ2ujbszVxyBjhH2UQ"
   },
   {
     "id": 2,
-    "name": "Unsample 1",
+    "name": "Unsample #1",
     "price": "0",
     "description": "A set of 5 images collected from unsample.net",
     "image_url": "/unsamples1.jpg",
-    "filename": "Emojis.zip",
+    "filename": "unsamples1.zip",
     "hash": "QmVGDJW1vc9pwB22DpYQdrd3QQcPp3rKZCgUAcrbVV6yea"
   },
   {
     "id": 3,
-    "name": "Unsample 2",
+    "name": "Unsample #2",
     "price": "0",
     "description": "A set of 5 images collected from unsample.net",
     "image_url": "/unsamples2.jpg",
-    "filename": "Emojis.zip",
+    "filename": "unsamples2.zip",
     "hash": "QmWtTj4tpm7oRxiVhV7U4kHfQwhhJJ2ujbszVxyBjhH2UQ"
   }
 ]
