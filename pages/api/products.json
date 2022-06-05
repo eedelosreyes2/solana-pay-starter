@@ -1,11 +1,29 @@
 [
   {
     "id": 1,
-    "name": "Some Product",
-    "price": "0.09",
-    "description": "This is some product that will be updated once I know what product to sell!",
-    "image_url": "https://elijahdr.vercel.app/_next/image?url=%2FNAC3221.gif&w=128&q=75",
+    "name": "Unsample 0",
+    "price": "0",
+    "description": "A set of 5 images collected from unsample.net",
+    "image_url": "/unsamples0.jpg",
     "filename": "Emojis.zip",
-    "hash": "QmUk5iQfKLkjXznq1tkgYybhw2AT8RnHj5d1Xs1nKBpYPd"
+    "hash": "QmPU8hkwZuTWfV998LCDgc8Ax54QE2cC5uNZfvHuKKxQVV"
+  },
+  {
+    "id": 2,
+    "name": "Unsample 1",
+    "price": "0",
+    "description": "A set of 5 images collected from unsample.net",
+    "image_url": "/unsamples1.jpg",
+    "filename": "Emojis.zip",
+    "hash": "QmVGDJW1vc9pwB22DpYQdrd3QQcPp3rKZCgUAcrbVV6yea"
+  },
+  {
+    "id": 3,
+    "name": "Unsample 2",
+    "price": "0",
+    "description": "A set of 5 images collected from unsample.net",
+    "image_url": "/unsamples2.jpg",
+    "filename": "Emojis.zip",
+    "hash": "QmWtTj4tpm7oRxiVhV7U4kHfQwhhJJ2ujbszVxyBjhH2UQ"
   }
 ]
