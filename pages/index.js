@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CreateProduct from '../components/CreateProduct';
 import Product from '../components/Product';
 import HeadComponent from '../components/Head';
-
 import { useWallet } from '@solana/wallet-adapter-react';
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const App = () => {
   const { publicKey } = useWallet();
@@ -13,14 +11,6 @@ const App = () => {
     : false;
   const [creating, setCreating] = useState(false);
   const [products, setProducts] = useState([]);
-
-  const renderNotConnectedContainer = () => (
-    <div>
-      <div className="button-container">
-        <WalletMultiButton className="cta-button connect-wallet-button" />
-      </div>
-    </div>
-  );
 
   useEffect(() => {
     // if (publicKey) {
@@ -32,14 +22,6 @@ const App = () => {
       });
     // }
   }, []);
-
-  const renderItemBuyContainer = () => (
-    <div className="products-container">
-      {products.map((product) => (
-        <Product key={product.id} product={product} isConnected={publicKey} />
-      ))}
-    </div>
-  );
 
   const renderFooter = () => (
     <div>
@@ -84,11 +66,16 @@ const App = () => {
           )}
         </header>
 
-        <main>
-          {creating && <CreateProduct />}
-          {/* {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()} */}
-          {renderItemBuyContainer()}
-        </main>
+        {creating && <CreateProduct />}
+        <div className="products-container">
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              product={product}
+              isConnected={publicKey}
+            />
+          ))}
+        </div>
 
         <div className="footer-container">{renderFooter()}</div>
       </div>

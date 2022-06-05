@@ -5,6 +5,33 @@
   overflow: hidden;
 }
 
+.header {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    height: unset;
+    overflow: scroll;
+  }
+  .header {
+    font-size: 32px;
+    margin-top: 25px;
+  }
+  .sub-text {
+    font-size: 20px;
+  }
+  .products-container {
+    padding-bottom: 100px;
+  }
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -20,16 +47,6 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
-}
-
-.header {
-  margin: 0;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.sub-text {
-  font-size: 25px;
 }
 
 .gradient-text {
@@ -91,11 +108,6 @@ button:disabled {
   bottom: 0;
   left: 0;
   padding-bottom: 20px;
-}
-
-.twitter-logo {
-  width: 35px;
-  height: 35px;
 }
 
 .footer-text {
@@ -167,6 +179,7 @@ button:disabled {
   align-items: center;
   margin-top: 20px;
 }
+
 /* KeyFrames */
 @-webkit-keyframes gradient-animation {
   0% {
